@@ -12,4 +12,8 @@ pip install -r requirements.txt
 
 ```bash
 python main.py
+
+
+adding read me also 
+
 ```
