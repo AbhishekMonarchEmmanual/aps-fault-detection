@@ -17,9 +17,13 @@ if __name__ =='__main__':
     # convert dataframe to json so that we can dump in mongodb
     df.reset_index(drop= True, inplace= True)
     # df.T to transpose the data which is required.
+   
     json_record= list(json.loads(df.T.to_json()).values())
+    
     print(json_record[0])
+
     # insert the data into the mongo db 
+
     client[dataBase][collection].insert_many(json_record)
     
 
